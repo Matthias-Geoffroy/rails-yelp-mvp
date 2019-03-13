@@ -1,0 +1,21 @@
+<h1 class="text-center">Review list</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <ul class="list-group">
+        <% @reviews.each do |review| %>
+          <%= link_to restaurant_path(review.id), class: "btn btn-link" do %>
+            <li class="list-group-item">
+              <%= restaurant_id.name %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm text-center">
+      <%= link_to 'Add a new restaurant', new_review_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
