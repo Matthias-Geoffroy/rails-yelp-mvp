@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 
   def new
     # @restaurant = Restaurant.find(params[:restaurant_id])
+    @garden = Garden.find(params[:garden_id])
     @review = Review.new
   end
 
